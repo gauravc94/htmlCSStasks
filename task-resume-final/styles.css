@@ -1,0 +1,209 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif, Verdana, Tahoma;
+    /* border: 1px solid blue; */
+    margin: 0;
+    /* background-color: lightgray; */
+
+}
+
+.header {
+    background-color: #565656;
+    text-align: center;
+}
+
+.header-image {
+    border-radius: 50%;
+    border: .4rem dotted #fbbe27;
+    margin-top: 2em;
+}
+
+.header-heading {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 100;
+    background-color: #fbbe27;
+    /* border: 1px solid black; */
+    padding: .1rem 2rem;
+    margin: 0 auto;
+    border-radius: 4%;
+    position: relative;
+    top: -25px;
+    z-index: 1;
+    max-width: 600px;
+    /* min-width: auto; */
+    /* left: 0px;
+    bottom: 0px; */
+}
+
+.header-contact {
+    background-color: white;
+    margin-top: -3rem;
+    padding: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid black;
+
+}
+
+.header-strip {
+    background-color: white;
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+    padding: 0.5rem;
+    position: relative;
+    top: -74px;
+}
+
+.header-strip-content {
+    visibility: hidden;
+    /* display: none; */
+}
+
+.item1 {
+    grid-area: profile;
+    /* background-color: aqua; */
+}
+
+.item2 {
+    grid-area: skills;
+}
+
+.item3 {
+    grid-area: workexp1;
+}
+
+.item4 {
+    grid-area: workexp2;
+}
+
+.item5 {
+    grid-area: education;
+}
+
+.container {
+    display: grid;
+    /* grid-template-columns: auto auto; */
+    grid-template-areas: 'profile workexp2'
+                         'skills workexp2' 
+                         'skills education' 
+                         'workexp1 education';
+    column-gap: 1em;
+    margin: 2em;
+    /* background-color: orange; */
+}
+
+.item {
+    padding: 0 1em;
+    /* background-color: aqua; */
+}
+
+.item img {
+    border-radius: 50%;
+    /* border: .4rem dotted #fbbe27; */
+    border: .4rem dotted rgba(251, 190, 39, 0.7);
+    /* position: relative; */
+}
+
+.item h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: rgb(105, 104, 104);
+    display: inline-block;
+    margin-left: .3rem;
+    position: relative;
+    top:-15px;
+    /* margin-left: .5rem;
+    margin-right: 0;
+    margin-top: -5rem; */
+}
+
+.item1, .item2, .item3 {
+    border-right: 1px solid black;
+}
+
+h3 {
+    text-align: center;
+}
+
+/* 
+.slider {
+    background-color: #fbbe27;
+} */
+
+/* Change the color of the input range */
+
+.slider {
+    -webkit-appearance: none;
+    /* display: inline-block; */
+    width: 95%;
+    /* margin: 0 auto; */
+    height: 7px;
+    /* background: #ddd; */
+    background: #fbbe27;
+    outline: none;
+    opacity: .7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: .1px solid grey;
+    /* background: #fbbe27; */
+    background: white;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.jobs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.job-name {
+    font-weight: bold;
+    font-size: large;
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .container {
+        display: grid;
+        /* grid-template-columns: auto auto; */
+        grid-template-areas: 'profile'
+                             'skills'
+                             'workexp1'
+                             'workexp2'
+                             'education';
+        column-gap: 1em;
+        margin: 2rem;
+        /* background-color: orange; */
+    }
+
+    .item1, .item2, .item3 {
+        border-right: none;
+    }
+
+  }
